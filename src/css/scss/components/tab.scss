@@ -1,0 +1,65 @@
+@import url(../../../App.css);
+.tab {
+  width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding: 10px 5px;
+    line-height: 30px;
+  }
+  &-item{
+    width: 95px;
+    &.is-selected,
+    &:hover {
+      .tab-btn {
+        color: coral;
+
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+    &.is-selected{
+      .tab-btn {
+        font-weight: bold;
+      }
+    }
+  }
+  &-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border-bottom: 2px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    &:after {
+      opacity: 0;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      transition: 0.3s;
+      width: 100%;
+      height: 2px;
+      background-color: coral;
+      content:'';
+    }
+  }
+  &-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #999;
+    &.is-active {
+      display: block;
+    }
+  }
+}
