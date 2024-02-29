@@ -1,12 +1,6 @@
 import React, {useEffect} from "react";
-import TabFunc from '../common.js'
-import '../css/scss/components/tab.scss'
-const commonInstance = new TabFunc();
-
 const Tab = () => {
-  useEffect(() => {
-    window.TEST.Tab();
-  }, []);  
+
   return (
     <div className="tab js-tab">
       <ul className="tab-list js-tab-list" role="tablist">
