@@ -1,6 +1,8 @@
 @import url(../../../App.css);
 .tab {
   width: 350px;
+  height: 430px;
+
   border: 1px solid #ddd;
   border-radius: 10px;
   &-list {
@@ -50,7 +52,9 @@
     }
   }
   &-panel {
+    z-index: 0;
     display: flex;
+    position: absolute;
     align-items: center;
     justify-content: center;
     width: 350px;
@@ -58,8 +62,10 @@
     font-weight: bold;
     font-size: 17px;
     color: #999;
+    opacity: 0;
     &.is-active {
-      display: block;
+      opacity: 1;
+      z-index: 5;
     }
   }
 }
