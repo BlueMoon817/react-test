@@ -72,3 +72,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0
 }
+.btn {
+  position:absolute;
+  top: 0;
+  left: 0;
+
+}
+.wrap{
+  margin-top: 50px;
+}

@@ -2,9 +2,16 @@
 .tab {
   width: 350px;
   height: 430px;
-
   border: 1px solid #ddd;
   border-radius: 10px;
+  &-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tab:not(:first-of-type){
+      margin-left: 10px;
+    }
+  }
   &-list {
     display: flex;
     justify-content: space-between;

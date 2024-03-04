@@ -1,10 +1,14 @@
+import React from "react";
+import { Routes, Route} from "react-router-dom";
 import Main from './pages/Main.jsx';
-import TabFunc from './common.js'
-
-function App() {
+import Sub from './pages/Sub.jsx';
+function App(commonInstance) {
   return (
-    <div className="App">
-      <Main/>
+    <div>
+      <Routes>
+        <Route path="/" element={<Main commonInstance />}></Route>
+        <Route path="/sub" element={<Sub commonInstance />}></Route>
+      </Routes>
     </div>
   );
 }
